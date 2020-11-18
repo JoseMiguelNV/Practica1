@@ -5,7 +5,7 @@ namespace PracticaApp
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args) // Main crea una instancia de la clase Programa, y llama a la función Run.
         {
             Programa p = new Programa();
             p.Run();

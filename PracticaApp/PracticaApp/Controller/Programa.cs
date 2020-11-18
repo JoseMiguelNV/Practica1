@@ -8,55 +8,82 @@ namespace PracticaApp.Controller
 {
     class Programa
     {
-        public void Run()
+        public void Run() 
         {
-            byte option = 0;
+            int option = 0;
             do
             {
-                UserInterface.ShowMainMenu();
-                try
+                option = UserInterface.ShowMainMenu();
                 {
-                    option = Convert.ToByte(Console.ReadLine());
-                    switch(option)
+                    //option = Convert.ToInt32(Console.ReadLine());
+
+                    switch (option)
                     {
                         case 1:
-                            int num1 = UserInterface.AskFor2Potencia();
-                            int resultado1 = MathCalculator.Numero2Potencia(num1);
-                            Console.WriteLine("La poténcia de 2 elevado a " + num1 + " es " + resultado1 + ".");
+                            Console.Clear();
+                            double num1 = UserInterface.AskFor2Potencia();
+                            double resultado1 = MathCalculator.Numero2Potencia(num1);
+                            Console.WriteLine("La poténcia de 2^" + num1 + " es " + resultado1 + ".");
+                            Console.ReadLine();
+                            Console.Clear();
                             break;
                         case 2:
+                            Console.Clear();
                             int num2 = UserInterface.AskSumatorio();
                             int resultado2 = MathCalculator.Sumatorio(num2);
                             Console.WriteLine("El Sumatorio de " + num2 + " es " + resultado2 + ".");
+                            Console.ReadLine();
+                            Console.Clear();
                             break;
                         case 3:
+                            Console.Clear();
                             double num3 = UserInterface.AskForFactorialNumber();
-                            double resultado3 = MathCalculator.Factorial(num3);
+                            long resultado3 = MathCalculator.Factorial(num3);
                             Console.WriteLine("El Factorial de " + num3 + " es " + resultado3 + ".");
+                            Console.ReadLine();
+                            Console.Clear();
                             break;
                         case 4:
+                            Console.Clear();
                             int num4 = UserInterface.AskForNumPrimo();
-                            MathCalculator.NumeroPrimo(num4);
+                            bool es_primo = MathCalculator.NumeroPrimo(num4);
+                            if (es_primo)
+                                Console.WriteLine("El número " + num4 + " no es Prímo.");
+                            else
+                                Console.WriteLine("El número " + num4 + " es Prímo.");
+                            Console.ReadLine();
+                            Console.Clear();
                             break;
                         case 5:
-                            UserInterface.AskForFibonacci();
-                            MathCalculator.SerieFibonacci();
-                            Console.WriteLine("--------------------------------------------------------------------------------------");
-                            Console.WriteLine("Esta ha sido la Sucesión de Fibonacci con sus primeros 80 números... que la disfrutes!");
+                            Console.Clear();
+                            int num5 = UserInterface.AskForFibonacci();
+                            int resultado5 = MathCalculator.SerieFibonacci(num5);
+                            Console.ReadLine();
+                            Console.Clear();
+                            break;
+                        case 0:
+                            Console.Clear();
+                            Console.WriteLine("Lamentamos que te vayas...");
+                            Console.WriteLine();
+                            Console.WriteLine("-------------");
+                            Console.WriteLine("Hasta pronto!");
+                            Console.WriteLine("-------------");
+                            Console.WriteLine();
+                            Console.WriteLine();
+                           
+                           
+                            break;
+                        default:
                             Console.WriteLine();
                             break;
-                        case 6:
-                            Console.WriteLine("Hasta pronto!");
-                            Environment.Exit(0);
-                            break;
+
                     }
+
                 }
-                catch(Exception e)
-                {
-                    Console.WriteLine("¡Error de formato! Vuelve a comenzar introduciendo un número entero!");
-                    Console.WriteLine();
-                }
-            } while (option != 6);
+               
+            } while (option != 0);
+      
+            
         }
     }
 }
