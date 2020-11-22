@@ -15,15 +15,12 @@ namespace PracticaApp.Controller
             {
                 option = UserInterface.ShowMainMenu();
                 {
-                    //option = Convert.ToInt32(Console.ReadLine());
-                    
+        
                     switch (option)
                     {
                         case 1:
                             Console.Clear();
                             int num1 = UserInterface.AskFor2Potencia();
-                            //if (num1 == int.minValue)
-                            // console writeline....
                             double resultado1 = MathCalculator.CalculoPotencia(num1);
                             Console.WriteLine("La poténcia de 2^" + num1 + " es " + resultado1 + ".");
                             Console.ReadLine();
@@ -31,7 +28,7 @@ namespace PracticaApp.Controller
                             break;
                         case 2:
                             Console.Clear();
-                            int num2 = UserInterface.AskSumatorio();
+                            int num2 = UserInterface.AskForSumatorio();
                             int resultado2 = MathCalculator.CalcularSumatorio(num2);
                             Console.WriteLine("El Sumatorio de " + num2 + " es " + resultado2 + ".");
                             Console.ReadLine();
@@ -84,26 +81,21 @@ namespace PracticaApp.Controller
                             Console.BackgroundColor = ConsoleColor.Red;
                             Console.WriteLine("               ");
                             Console.ResetColor();
-
                             break;
                         default:
                            
                             if (option >= 6)
                             {
-                                
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Has introducido un número muy elevado, introduce un número del 1 al 5.");
                                 Console.ResetColor();
+                                Console.ReadLine();
+                                Console.Clear();
                             }
                             break;
-
                     }
-
-                }
-               
-            } while (option != 0);
-      
-            
+                }  
+            } while (option != 0);  
         }
     }
 }

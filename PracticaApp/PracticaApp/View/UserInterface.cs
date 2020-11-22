@@ -49,9 +49,10 @@ namespace PracticaApp.View
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error de formato! Introduce un número del 1 al 5 para seleccionar una opción, recuerda que pulsado 0 saldrás de la app.");
                 Console.ResetColor();
-                
+                Console.ReadLine();
+                Console.Clear();
             }
-            return -1;
+            return UserInterface.ShowMainMenu();
         }
 
         public static int AskFor2Potencia()
@@ -75,16 +76,16 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error de Formato! Introduce un número.");
-                Console.WriteLine(UserInterface.ShowMainMenu());
-                Console.Clear();
+                Console.WriteLine("Formato no válido! Introduce esta vez un número.");
                 Console.ResetColor();
+                Console.ReadLine();
+                Console.Clear();    
             }
-            return int.MinValue;
+            return UserInterface.AskFor2Potencia();
 
         }
 
-        public static int AskSumatorio()
+        public static int AskForSumatorio()
         {
             try
             {
@@ -104,11 +105,12 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error de formato! Introduce un número.");
+                Console.WriteLine("Formato no válido! Introduce esta vez un número.");
                 Console.ResetColor();
+                Console.ReadLine();
                 Console.Clear();
             }
-            return int.MinValue;
+            return UserInterface.AskForSumatorio();
         }
 
         public static int AskForFactorialNumber()
@@ -131,10 +133,12 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error de formato! Introduce un número.");
+                Console.WriteLine("Formato no válido! Introduce esta vez un número.");
                 Console.ResetColor();
+                Console.ReadLine();
+                Console.Clear();
             }
-            return int.MinValue;
+            return UserInterface.AskForFactorialNumber();
         }
 
         public static int AskForNumPrimo()
@@ -157,10 +161,12 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error de formato! Introduce un número.");
+                Console.WriteLine("Formato no válido! Introduce esta vez un número.");
                 Console.ResetColor();
+                Console.ReadLine();
+                Console.Clear();
             }
-            return -1;
+            return UserInterface.AskForNumPrimo();
         }
 
         public static int AskForFibonacci()
@@ -183,10 +189,12 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error de formato! Introduce un número.");
+                Console.WriteLine("Formato no válido! Introduce esta vez un número que no supere las 4 cifras.");
                 Console.ResetColor();
+                Console.ReadLine();
+                Console.Clear();
             }
-            return -1;
+            return UserInterface.AskForFibonacci();
         }
     }
 }
