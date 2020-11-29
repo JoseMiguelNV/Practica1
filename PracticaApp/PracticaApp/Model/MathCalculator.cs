@@ -9,7 +9,7 @@ namespace PracticaApp.Model
         /// </summary>
         /// <param name="num1"> Es el número entero recibido como parámetro y es utilizado para elevarlo a la potencia en base 2. </param> 
         /// <returns> Delvuelve como resultado de la función 2^num1, un número real. </returns> 
-        public static double CalculoPotencia(int num1)
+        public static double CalcularPotenciaBase2(int num1)
         {
             int basePotencia = 2;
             double resultado1 = 1;
@@ -26,11 +26,10 @@ namespace PracticaApp.Model
         {
             int resultado2 = 0;
             for (int i = 0; i <= num2; i++)
-            {
                 resultado2 += i;
-            }
             return resultado2;
         }
+
         /// <summary>
         /// Esta función recibe un número entero como parámetro, y lo utiliza para calcular el Factorial de dicho número.
         /// </summary>
@@ -40,12 +39,10 @@ namespace PracticaApp.Model
         {
             double resultado3 = 1;
             for (int i = 1; i <= num3; i++)
-            {
                 resultado3 *= i;
-            }
             return resultado3;
-
         }
+
         /// <summary>
         /// Esta función recibe un número entero como parámetro, y realiza un booleano indicando si dicho número es primo o no lo es.
         /// </summary>
@@ -61,6 +58,7 @@ namespace PracticaApp.Model
             }
             return false;
         }
+
         /// <summary>
         /// Esta función recibe como parámetro un numero entero y plasma la Sucesión de fibonacci, formada por tántos números como el recibido como parámetro.
         /// </summary>
@@ -68,12 +66,12 @@ namespace PracticaApp.Model
         public static void SerieFibonacci(int num5)
         {
             int i = 0; int num1 = 0; int num2 = 1;
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine();
             Console.WriteLine("Has elegído el número " + num5 + "!");
             Console.ResetColor();
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("---------------------");
             Console.WriteLine("Comienza la Sucesión!");
             Console.WriteLine("---------------------");

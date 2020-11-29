@@ -15,13 +15,12 @@ namespace PracticaApp.Controller
             {
                 option = UserInterface.ShowMainMenu();
                 {
-        
                     switch (option)
                     {
                         case 1:
                             Console.Clear();
                             int num1 = UserInterface.AskFor2Potencia();
-                            double resultado1 = MathCalculator.CalculoPotencia(num1);
+                            double resultado1 = MathCalculator.CalcularPotenciaBase2(num1);
                             Console.WriteLine("La poténcia de 2^" + num1 + " es " + resultado1 + ".");
                             Console.ReadLine();
                             Console.Clear();
@@ -62,7 +61,7 @@ namespace PracticaApp.Controller
                             break;
                         case 0:
                             Console.Clear();
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.WriteLine("Lamento mucho que te vayas...");
                             Console.WriteLine();
                             Console.ResetColor();
@@ -72,22 +71,22 @@ namespace PracticaApp.Controller
                             Console.WriteLine("-------------");
                             Console.ResetColor();
                             Console.ReadLine();
+                            Console.Clear();
                             Console.BackgroundColor = ConsoleColor.Red;
                             Console.ForegroundColor = ConsoleColor.Black;
-                            Console.WriteLine("               ");
+                            Console.WriteLine("                                   ");
                             Console.BackgroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine("  VIVA ESPAÑA  ");
+                            Console.WriteLine("            VIVA ESPAÑA            ");
                             Console.BackgroundColor = ConsoleColor.Yellow;
                             Console.BackgroundColor = ConsoleColor.Red;
-                            Console.WriteLine("               ");
+                            Console.WriteLine("                                   ");
                             Console.ResetColor();
                             break;
                         default:
-                           
                             if (option >= 6)
                             {
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("Has introducido un número muy elevado, introduce un número del 1 al 5.");
+                                Console.ForegroundColor = ConsoleColor.DarkRed;
+                                Console.WriteLine("Introduce un número del 1 al 5.");
                                 Console.ResetColor();
                                 Console.ReadLine();
                                 Console.Clear();
