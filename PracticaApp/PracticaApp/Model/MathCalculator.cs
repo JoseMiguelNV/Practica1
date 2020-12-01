@@ -71,9 +71,11 @@ namespace PracticaApp.Model
             Console.WriteLine("Has elegído el número " + num5 + "!");
             Console.ResetColor();
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Comienza la Sucesión!");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------------");
             Console.ResetColor();
             while (i < num5)

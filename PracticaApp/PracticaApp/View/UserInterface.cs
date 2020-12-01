@@ -43,6 +43,7 @@ namespace PracticaApp.View
                 Console.ResetColor();
                 Console.ReadLine();
                 Console.Clear();
+                return UserInterface.ShowMainMenu();
             }
             return UserInterface.ShowMainMenu();
         }
@@ -50,9 +51,12 @@ namespace PracticaApp.View
         public static int AskFor2Potencia()
         {   
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("-------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Potencia en base 2:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("-------------------");
             Console.ResetColor();
             Console.WriteLine();
@@ -71,16 +75,19 @@ namespace PracticaApp.View
                 Console.WriteLine("Formato no válido! Introduce esta vez un número entero.");
                 Console.ResetColor();
                 Console.ReadLine();
-                Console.Clear();    
+                Console.Clear();
+                return UserInterface.AskFor2Potencia();
             }
             return UserInterface.AskFor2Potencia();
         }
 
         public static int AskForSumatorio()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Sumatorio:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------");
             Console.ResetColor();
             Console.WriteLine();
@@ -100,15 +107,18 @@ namespace PracticaApp.View
                 Console.ResetColor();
                 Console.ReadLine();
                 Console.Clear();
+                return UserInterface.AskForSumatorio();
             }
             return UserInterface.AskForSumatorio();
         }
 
         public static int AskForFactorialNumber()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Factorial:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------");
             Console.ResetColor();
             Console.WriteLine();
@@ -128,15 +138,18 @@ namespace PracticaApp.View
                 Console.ResetColor();
                 Console.ReadLine();
                 Console.Clear();
+                return UserInterface.AskForFactorialNumber();
             }
             return UserInterface.AskForFactorialNumber();
         }
 
         public static int AskForNumPrimo()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Números Prímos:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------");
             Console.ResetColor();
             Console.WriteLine();
@@ -156,15 +169,18 @@ namespace PracticaApp.View
                 Console.ResetColor();
                 Console.ReadLine();
                 Console.Clear();
+                return UserInterface.AskForNumPrimo();
             }
             return UserInterface.AskForNumPrimo();
         }
 
         public static int AskForFibonacci()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Sucesión de Fibonacci:");
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("----------------------");
             Console.ResetColor();
             Console.WriteLine();
@@ -180,10 +196,11 @@ namespace PracticaApp.View
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("Formato no válido! Introduce esta vez un número entero que no supere las 4 cifras.");
+                Console.WriteLine("Formato no válido! Introduce esta vez un número entero.");
                 Console.ResetColor();
                 Console.ReadLine();
                 Console.Clear();
+                return UserInterface.AskForFibonacci();
             }
             return UserInterface.AskForFibonacci();
         }

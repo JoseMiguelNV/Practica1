@@ -65,9 +65,11 @@ namespace PracticaApp.Controller
                             Console.WriteLine("Lamento mucho que te vayas...");
                             Console.WriteLine();
                             Console.ResetColor();
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("-------------");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("Hasta pronto!");
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("-------------");
                             Console.ResetColor();
                             Console.ReadLine();
