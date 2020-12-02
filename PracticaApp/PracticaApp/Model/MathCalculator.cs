@@ -50,7 +50,6 @@ namespace PracticaApp.Model
         /// <reutrns> Devuelve un booleano indicando true si el número es primo, o false si no lo es. </reutrns> 
         public static bool EsNumeroPrimo(int num4)
         {
-            int a = 0;
             for (int i = 2; i < num4; i++)
             {
                 if ((num4 % i) == 0)
@@ -65,7 +64,7 @@ namespace PracticaApp.Model
         /// <param name="num5"> Es el número entero recibido como parámetro, se aplica a la Sucesión de Fibonacci para que ésta tenga tantos números como el aplicado. </param> 
         public static void SerieFibonacci(int num5)
         {
-            int i = 0; int num1 = 0; int num2 = 1;
+            int num1 = 0; int num2 = 1;
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine();
             Console.WriteLine("Has elegído el número " + num5 + "!");
@@ -78,12 +77,11 @@ namespace PracticaApp.Model
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("---------------------");
             Console.ResetColor();
-            while (i < num5)
+            for (int i = 0; i < num5; i++)
             {
                 Console.Write(num1 + ", ", num2);
                 num2 = num1 + num2;
                 num1 = num2 - num1;
-                i++;
             }
         }
     }
